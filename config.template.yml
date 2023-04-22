@@ -1,0 +1,29 @@
+projects:
+  - name: demo
+    accepted_domains:
+      - demo.dev
+      - *.demo.dev
+    reciever:
+      - mail: "contact@demo.dev"
+        # subject: static subject
+        # subject_from: subject from post request field
+        # message: static message
+        # message_from: message from post request field
+spam:
+  # Does not allow links to be sent within message field
+  disallow_links: true
+token:
+  valid_seconds: 600
+mail:
+  use_ssl: true
+  use_tls: false
+  port: 465
+  server: smtp.gmail.com
+  username: dev@gmail.com
+  sender_address: dev@gmail.com
+  password: "1234"
+service:
+  bind: "0.0.0.0"
+  port: 25
+log:
+  level: DEBUG
